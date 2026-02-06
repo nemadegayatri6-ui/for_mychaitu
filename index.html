@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>For Chaitu ❤️</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(to bottom right, #ff758c, #ff7eb3);
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.15);
+      padding: 35px;
+      border-radius: 25px;
+      text-align: center;
+      max-width: 500px;
+      backdrop-filter: blur(8px);
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 38px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1.7;
+    }
+
+    button {
+      margin-top: 25px;
+      padding: 12px 28px;
+      font-size: 18px;
+      border: none;
+      border-radius: 30px;
+      background: #ff2e63;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #e61c50;
+    }
+
+    /* Heart animation */
+    .heart {
+      position: fixed;
+      bottom: -20px;
+      font-size: 24px;
+      animation: floatUp 6s linear infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <h1>Chaitu ❤️</h1>
+
+    <p>
+      तू माझ्या आयुष्यात आहेस<br>
+      ही गोष्टच मला खूप खास वाटते 😊<br><br>
+
+      तुझ्यासोबत असताना<br>
+      मी जशी आहे तशीच राहू शकते,<br>
+      आणि तेच सगळ्यात सुंदर आहे 💖<br><br>
+
+      तुझं हसणं माझा दिवस बदलून टाकतं<br><br>
+
+      <b>I love you so much ❤️</b><br><br>
+
+      — नेहमी तुझी, Gayatri 🌷
+    </p>
+
+    <button onclick="playSong()">▶ I Love You</button>
+
+    <audio id="song" autoplay loop>
+      <source src="https://archieve.org/download/tum-mile-dil-khile/Tum%20Mile%Dil%20Khile.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <script>
+    function playSong() {
+      document.getElementById("song").play();
+    }
+
+    // floating hearts
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.innerHTML = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = (20 + Math.random() * 20) + "px";
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 6000);
+    }, 400);
+  </script>
+
+</body>
+</html>

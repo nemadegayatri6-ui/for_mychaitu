@@ -93,21 +93,18 @@
       — नेहमी तुझी, Gayatri 🌷
     </p>
 
-    <button onclick="playSong()">▶ playSong</button>
+    <button onclick="playSong()">▶ I Love You</button>
 
-    <audio id="song" preload="auto"></audio>
-      <source src="tum-mile.mp3" type="audio/mp3">
+    <audio id="song">
+      <!-- soft romantic song -->
+      <source src="assets/tu-mile-dil-khile.mp3" type="audio/mpeg">
     </audio>
   </div>
 
   <script>
-  function playSong() {
-    const song = document.getElementById("song");
-    song.play ().catch(() =>{
-        alert("Ek baar play button dabao");
-    });
-  }
-</script>
+    function playSong() {
+      document.getElementById("song").play();
+    }
 
     // floating hearts
     setInterval(() => {
